@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuki Kaneko | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<style>
+    /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #850321;
+    color: #fffaef;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Hero Section */
+h1, h2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+ margin: 0; padding: 0;
+  position:absolute;
+  top: 50%; left: 50%;
+  transform:translate(-50%,-50%);
+  font-size: 6em; color: #fffaef; 
+  text-transform:uppercase;
+}
+
+
+.hero {
+    color: #fffaef;
+    padding: 120px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #fffaef;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 10px; 
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 0; 
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #fffaef;
+    color: #850321;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #850321;
+    color: #fffaef;
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 10px;
+    
+   
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    align-items: center; /* Align content in the center */
+    justify-content: space-between; /* Spread text & image */
+    gap: 40px; /* Space between text & image */
+}
+
+/* Text Content */
+/* Blinking */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Yuki Image */
+#yukiimg {
+    width: 300px; 
+    height: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    border-radius: 10px;
+    opacity: 1; /* Ensure image is fully visible */
+    transition: opacity 0.3s ease; 
+}
+
+
+
+/* Projects Section */
+.projects {
+    margin-top: 50px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 500px;
+    height: 400px;
+    background: #fffaef;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    border: 2px solid transparent; /* Add a border */
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    border-color: #850321;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: #850321;
+    width: 100%;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.project:hover .overlay {
+    background: #5e0117;
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 50px;
+
+    padding: 40px;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #fffaef;
+    color: #850321;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #850321;
+    color: #fffaef;
+}
+
+
+</style>
+
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Yuki Kaneko</h1>
+            <br>
+            <p>Cursotive Front-end Developer & UX Designer</p>
+            <br>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <br><br>
+            <div class="about-container">
+                <!-- Text Section -->
+                <div class="text-content">
+                    <p class="typewriter-animation">A Japanese creative professional with a diverse educational background in beauty arts and business communications. Graduated from a beauty specialist vocational school and Sanno College’s Business Communication program, followed by 7 years of hands-on experience in the service industry, honing customer-centric skills and attention to detail.
+                        Currently completing a Web Developer certification at DCI Digital Career Institute, blending technical expertise with a lifelong passion for art, design, and creativity. Adept at merging aesthetic sensibilities with logical problem-solving to build visually engaging and functional digital experiences.</p>
+                    <br>
+                    <div class="qualifications">
+                        <h3>Qualifications</h3>
+                        <ul>
+                            <li>DCI Digital Career Institute - Web Development</li>
+                            <li>Google UX Design Course</li>
+                            <li>Figma 2024 Beginner to Pro</li>
+                            <li>WordPress 2025 Masterclass</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Image Section -->
+                <img id="yukiimg" src="yukiimg.jpg" alt="Yuki Kaneko">
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <br><br>
+            <div class="grid">
+                <div class="project">
+                    <div class="overlay">
+                        <h3>Yoga Instructor Site</h3>
+                        <p>A custom website for a yoga coach.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="overlay">
+                        <h3>Barista Training Program</h3>
+                        <p>An interactive platform for barista education.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="overlay">
+                        <h3>Art Gallery Site</h3>
+                        <p>A modern digital art showcase.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <br><br><br>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
